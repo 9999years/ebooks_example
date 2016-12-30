@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
-ruby '2.1.3'
+ruby '2.4.0'
 
-gem 'twitter_ebooks', '3.0.6'
+gem 'json', github: 'flori/json', branch: 'v1.8'
+
+gem 'twitter_ebooks', '3.1.6'
 gem 'dotenv'

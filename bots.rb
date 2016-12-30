@@ -7,7 +7,6 @@ include Ebooks::Boodoo
 # Read defaults and lay env vars on top:
 SETTINGS = Dotenv.load('defaults.env').merge(ENV)
 
-
 # Information about a particular Twitter user we know
 class UserInfo
   attr_reader :username
@@ -234,11 +233,11 @@ class BoodooBot
     text = obscure_curses(text)
     super(ev, text, opts)
   end
- 
+
   # Helps us convert usage of "true" and "false" strings in .env files to booleans
   def to_boolean(str)
     str == 'true'
-  end 
+  end
 
   private
   def load_model!
